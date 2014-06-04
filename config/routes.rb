@@ -1,6 +1,11 @@
 Checkout1::Application.routes.draw do
 
   resources :charges
+
+  root 'charges#welcome'
+  get "new" => "charges#new"
+  get "create" => "charges#create"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
